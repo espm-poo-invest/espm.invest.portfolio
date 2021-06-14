@@ -29,7 +29,7 @@ public class PortfolioResource implements PortfolioController{
     }
 
     @Override
-    public List<Portfolio> portfolio() {
+    public Portfolio portfolio() {
         return null;
     }
 

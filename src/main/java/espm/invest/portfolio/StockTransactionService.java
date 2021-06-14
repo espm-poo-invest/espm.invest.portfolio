@@ -80,7 +80,7 @@ public class StockTransactionService {
             throw new RuntimeException("Stock does not exist: " + bean.getName());
         }
 
-        //não sei se esses fazer sentido já que não tem cotação, é tudo Stock
+        //não sei se esses fazem sentido já que não tem cotação, é tudo Stock
         Stock stockMoment = stockController.stock(stock.getName(), sdf.format(now));
         if (stockMoment == null) {
             throw new RuntimeException("Cotacao nao existe: " + sdf.format(now));
