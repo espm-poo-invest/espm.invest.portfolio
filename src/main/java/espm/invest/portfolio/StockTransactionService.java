@@ -7,6 +7,7 @@ import espm.invest.portfolio.common.datatype.TransactionType;
 import espm.invest.stock.common.controller.StockController;
 import espm.invest.stock.common.datatype.Stock;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
