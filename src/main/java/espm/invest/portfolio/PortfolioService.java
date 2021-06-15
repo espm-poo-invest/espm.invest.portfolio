@@ -1,14 +1,13 @@
 package espm.invest.portfolio;
 
-import espm.invest.portfolio.common.controller.PortfolioController;
 import espm.invest.portfolio.common.datatype.Portfolio;
 import espm.invest.stock.common.controller.StockController;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.stereotype.Component;
 
-import javax.sound.sampled.Port;
 import java.util.UUID;
-
+@EnableFeignClients(basePackages = {"espm.invest.portfolio.common.controller","espm.invest.stock.common.controller"})
 @Component
 public class PortfolioService {
 
@@ -16,7 +15,7 @@ public class PortfolioService {
     private PortfolioRepository portfolioRepository;
 
     @Autowired
-    StockController stockController;
+    private StockController stockController;
 
     @Autowired
     private StockTransactionService stockTransactionService;

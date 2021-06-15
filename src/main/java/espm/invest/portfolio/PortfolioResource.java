@@ -1,20 +1,14 @@
 package espm.invest.portfolio;
+
 import espm.invest.portfolio.common.controller.PortfolioController;
 import espm.invest.portfolio.common.datatype.Portfolio;
 import espm.invest.portfolio.common.datatype.StockTransaction;
 import espm.invest.portfolio.common.datatype.TransactionBean;
-import espm.invest.stock.common.controller.StockController;
-import espm.invest.stock.common.datatype.Stock;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
-@EnableFeignClients(basePackages = {"espm.invest.portfolio.common.controller","espm.invest.stock.common.controller"})
 @RestController
 public class PortfolioResource implements PortfolioController{
     @Autowired
@@ -29,7 +23,7 @@ public class PortfolioResource implements PortfolioController{
     }
 
     @Override
-    public Portfolio portfolio() {
+    public List<Portfolio> portfolio() {
         return null;
     }
 

@@ -6,9 +6,7 @@ import espm.invest.portfolio.common.datatype.TransactionType;
 import espm.invest.stock.common.datatype.Stock;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.util.Date;
-import java.util.UUID;
 
 @Entity
 @Table(name= "stocktransaction")
@@ -31,7 +29,7 @@ public class StockTransactionModel {
     @Column(name = "amount")
     private double amount;
 
-    @Column(name = "type")
+    @Column(name = "nr_type")
     private Integer nrType;
 
     public StockTransactionModel() {
